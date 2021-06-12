@@ -50,9 +50,7 @@ mongoose.connect(connection_url,{
     useUnifiedTopology:true
 })
 //api routes
-app.get('/',(req,res) =>{
-    res.status(200).send('hello world')
-})
+
 
 app.get('/messages/sync',(req,res)=>{
     Messages.find((err,data) => {
